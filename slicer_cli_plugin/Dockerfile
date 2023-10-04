@@ -13,4 +13,8 @@ RUN pip3 install large-image[all] --find-links https://girder.github.io/large_im
 
 COPY . $PWD
 
+ARG DSA_USER=1001
+
+USER $DSA_USER
+
 ENTRYPOINT ["python3", "./cli_list.py"]
